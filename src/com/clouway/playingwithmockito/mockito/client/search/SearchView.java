@@ -7,11 +7,13 @@ import java.util.List;
 /**
 * author webmaster1803@gmail.com
 */
-interface SearchView {
+public interface SearchView {
 
     void showSearchResult(List<CompanyCard> searchResult);
 
     void notifyOfEmptySearch();
 
     void notifyOfConnectionError();
+
+    public void setPresenter(SearchPresenter presenter);
 }

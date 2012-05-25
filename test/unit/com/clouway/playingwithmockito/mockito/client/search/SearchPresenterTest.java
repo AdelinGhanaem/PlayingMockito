@@ -1,6 +1,5 @@
 package com.clouway.playingwithmockito.mockito.client.search;
 
-import com.clouway.playingwithmockito.mockito.client.CompanySearchAsync;
 import com.clouway.playingwithmockito.mockito.shared.CompanyCard;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import org.junit.Before;
@@ -50,10 +49,10 @@ public class SearchPresenterTest {
     @Test
     public void shouldShowSearchResultOnSearchSuccess() {
         String searchParameter = "search";
-        doOnSuccess(serverAnswer).when(async).getCompanyBytType(eq(searchParameter), any(AsyncCallback.class));
+        doOnSuccess(serverAnswer).when(async).getCompaniesByType(eq(searchParameter), any(AsyncCallback.class));
         searchPresenter.search(searchParameter);
         verify(view).showSearchResult(serverAnswer);
-        verify(async).getCompanyBytType(eq(searchParameter), any(AsyncCallback.class));
+        verify(async).getCompaniesByType(eq(searchParameter), any(AsyncCallback.class));
     }
 
 
@@ -61,7 +60,7 @@ public class SearchPresenterTest {
     public void userIsNotifiedWhenSearchResultIsEmpty() {
         String searchParam = "empty";
         ArrayList<CompanyCard> emptySearchResult = new ArrayList<CompanyCard>();
-        doOnSuccess(emptySearchResult).when(async).getCompanyBytType(eq(searchParam), any(AsyncCallback.class));
+        doOnSuccess(emptySearchResult).when(async).getCompaniesByType(eq(searchParam), any(AsyncCallback.class));
         searchPresenter.search(searchParam);
         verify(view).notifyOfEmptySearch();
 
@@ -72,7 +71,7 @@ public class SearchPresenterTest {
     public void notifiesUserOnCallbackFailure() {
 
         String searchParam = "will create connection failure !";
-        doOnFailure(new RuntimeException()).when(async).getCompanyBytType(eq(searchParam), any(AsyncCallback.class));
+        doOnFailure(new RuntimeException()).when(async).getCompaniesByType(eq(searchParam), any(AsyncCallback.class));
         searchPresenter.search(searchParam);
         verify(view).notifyOfConnectionError();
     }

@@ -1,0 +1,29 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c='urn:import:com.google.gwt.user.cellview.client'
+             xmlns:s="urn:import:com.google.gwt.sample.showcase.client.content.cell">
+    <g:DecoratorPanel>
+        <g:HTMLPanel>
+            <div>
+                Search .... !
+            </div>
+                <g:TextBox ui:field="searchText">
+
+                </g:TextBox>
+            <div>
+                <g:Button ui:field="search" text="Search"></g:Button>
+            </div>
+            <div>
+               <g:FlexTable ui:field="table">
+
+               </g:FlexTable>
+            </div>
+            <div>
+                <g:Label ui:field="label"></g:Label>
+            </div>
+
+        </g:HTMLPanel>
+
+
+    </g:DecoratorPanel>
+</ui:UiBinder>

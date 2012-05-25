@@ -1,4 +1,4 @@
-package com.clouway.playingwithmockito.mockito.client;
+package com.clouway.playingwithmockito.mockito.client.search;
 
 import com.clouway.playingwithmockito.mockito.shared.CompanyCard;
 import com.google.gwt.user.client.rpc.AsyncCallback;
@@ -10,5 +10,6 @@ import java.util.ArrayList;
  */
 public interface CompanySearchAsync {
 
-    void getCompanyBytType(String search, AsyncCallback<ArrayList<CompanyCard>> async);
+    void getCompaniesByType (String search, AsyncCallback<ArrayList<CompanyCard>> async);
+
 }

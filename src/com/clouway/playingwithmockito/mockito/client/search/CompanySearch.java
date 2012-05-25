@@ -1,19 +1,19 @@
-package com.clouway.playingwithmockito.mockito.client;
+package com.clouway.playingwithmockito.mockito.client.search;
 
 import com.clouway.playingwithmockito.mockito.shared.CompanyCard;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * author webmaster1803@gmail.com
  */
-@RemoteServiceRelativePath("CompanySearch")
+@RemoteServiceRelativePath("search")
 public interface CompanySearch extends RemoteService {
 
-    List<CompanyCard> getCompanyBytType(String search);
+    ArrayList<CompanyCard> getCompaniesByType(String search);
 
     /**
      * Utility/Convenience class.
