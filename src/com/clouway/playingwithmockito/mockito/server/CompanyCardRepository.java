@@ -1,5 +1,7 @@
 package com.clouway.playingwithmockito.mockito.server;
 
+import com.clouway.playingwithmockito.mockito.shared.CompanyCard;
+
 import java.util.Map;
 
 /**

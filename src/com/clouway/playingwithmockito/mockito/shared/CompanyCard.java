@@ -1,9 +1,11 @@
-package com.clouway.playingwithmockito.mockito.server;
+package com.clouway.playingwithmockito.mockito.shared;
+
+import java.io.Serializable;
 
 /**
 * author webmaster1803@gmail.com
 */
- class CompanyCard {
+ public class CompanyCard implements Serializable {
 
     private long id;
 

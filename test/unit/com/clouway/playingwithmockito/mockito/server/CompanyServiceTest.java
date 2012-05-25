@@ -1,5 +1,6 @@
 package com.clouway.playingwithmockito.mockito.server;
 
+import com.clouway.playingwithmockito.mockito.shared.CompanyCard;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

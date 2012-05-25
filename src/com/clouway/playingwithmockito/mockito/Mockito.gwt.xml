@@ -8,8 +8,10 @@
     <!-- Specify the app entry point class.                   -->
     <entry-point class='com.clouway.playingwithmockito.mockito.client.Mockito'/>
 
-
+    <source path="shared"/>
+    <source path="client"/>
     <!-- Specify the app servlets.                   -->
     <servlet path='/MockitoService' class='com.clouway.playingwithmockito.mockito.server.MockitoServiceImpl'/>
+    <!--<servlet path="/CompanySearch" class="com.clouway.playingwithmockito.mockito.server.CompanySearchImpl"/>-->
 
 </module>
